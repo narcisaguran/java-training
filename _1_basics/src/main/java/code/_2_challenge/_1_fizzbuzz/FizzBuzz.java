@@ -31,7 +31,7 @@ public class FizzBuzz {
                 new NumberWordCorrelation(3, "Fizz"),
                 new NumberWordCorrelation(5, "Buzz"),
                 new NumberWordCorrelation(7, "Rizz"),
-                new NumberWordCorrelation(9, "Jazz"),
+                new NumberWordCorrelation(11, "Jazz"),
         };
         boolean isDivisible = false;
         for (NumberWordCorrelation correlation : correlations) {
