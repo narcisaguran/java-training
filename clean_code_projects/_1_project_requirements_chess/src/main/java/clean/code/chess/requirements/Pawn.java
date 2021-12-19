@@ -9,6 +9,8 @@ public class Pawn {
 
     public Pawn(PieceColor pieceColor) {
         this.pieceColor = pieceColor;
+        this.xCoordinate = -1;
+        this.yCoordinate = -1;
     }
 
     public ChessBoard getChesssBoard() {
@@ -39,12 +41,16 @@ public class Pawn {
         return this.pieceColor;
     }
 
-    private void setPieceColor(PieceColor value) {
+    public void setPieceColor(PieceColor value) {
         pieceColor = value;
     }
 
     public void Move(MovementType movementType, int newX, int newY) {
-        throw new UnsupportedOperationException("Need to implement Pawn.Move()");
+        if(this.chessBoard.IsLegalBoardPosition(newX, newY)){
+            if(movementType.equals(MovementType.MOVE)){
+                this.chessBoard.Update(this);
+            }
+        }
     }
 
     @Override
